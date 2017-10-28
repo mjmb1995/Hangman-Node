@@ -1,0 +1,23 @@
+{
+  "name": "hangman-node",
+  "version": "1.0.0",
+  "description": "halloween themed hangman game",
+  "main": "game.js",
+  "dependencies": {
+    "inquirer": "^3.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjmb1995/Hangman-Node.git"
+  },
+  "author": "Mark Joshua Bihag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjmb1995/Hangman-Node/issues"
+  },
+  "homepage": "https://github.com/mjmb1995/Hangman-Node#readme"
+}
