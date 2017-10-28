@@ -15,15 +15,15 @@ function createArrayOfLetters(currentWord) {
 	letterObjectArray = []
 	for (var i = 0; i < currentWord.length; i++) {
 
-		letterObjectArray.push(new Letter(currentWord[i]))
+		letterObjectArray.push(new Letter(currentWord[i]));
 	}
 	return letterObjectArray
 }
 
 //constructor creates a word object when called using the word bank
 function Word() {
-	this.currentWord = selectRandomWord(spookyWordBank)
-	this.letters = createArrayOfLetters(this.currentWord)
+	this.currentWord = selectRandomWord(spookyWordBank);
+	this.letters = createArrayOfLetters(this.currentWord);
 
 }
 
@@ -42,7 +42,7 @@ Word.prototype.output = function(lettersUsed) {
 		var output = ""
 
 		for (var i = 0; i < this.letters.length; i++) {
-			output = output + this.letters[i].output(lettersUsed)
+			output = output + this.letters[i].output(lettersUsed);
 		}
 		return output
 	}

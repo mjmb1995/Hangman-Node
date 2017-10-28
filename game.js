@@ -2,6 +2,8 @@ var inquirer = require("inquirer");
 var Word = require("./word.js");
 
 var lettersUsed = [];
+
+//creates new word object from word.js
 var word = new Word();
 var guessesLeft = 10;
 
@@ -36,7 +38,7 @@ function restart(userInput) {
 
 
 function startGame() {
-	console.log(word.output(lettersUsed))
+	console.log(word.output(lettersUsed));
 	inquirer.prompt([{
 			type: "input",
 			message: "Type a letter to guess",
@@ -45,11 +47,11 @@ function startGame() {
 			// when letter guessed again tell user they can not use it again
 			if (lettersUsed.indexOf(userInput.letter) > -1) {
 				console.log("You already used that letter. Try again..");
-				startGame()
+				startGame();
 				return
 			}
 
-			lettersUsed.push(userInput.letter)
+			lettersUsed.push(userInput.letter);
 			// when the word is successfuly guessed, level 2 starts with only 5 guesses
 			if (word.output(lettersUsed) === word.currentWord) {
 				console.log("Great job! The word was: " + word.currentWord);
@@ -57,7 +59,7 @@ function startGame() {
 				lettersUsed = [];
 				word = new Word();
 				guessesLeft = 5;
-				startGame()
+				startGame();
 				return
 
 			} else {
@@ -77,11 +79,11 @@ function startGame() {
 							message: "Would you like to try again?",
 							name: "continue"
 						}])
-						.then(restart)
+						.then(restart);
 
 				} else {
-					console.log("You have " + guessesLeft + " guesses left!")
-					startGame()
+					console.log("You have " + guessesLeft + " guesses left!");
+					startGame();
 				}
 			}
 
